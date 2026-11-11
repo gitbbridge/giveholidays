@@ -1,0 +1,1 @@
+{"name":"giveholidays","version":"0.0.0","private":true,"description":"Give Holidays infrastructure controls; application pending setup approval","engines":{"node":">=22"},"scripts":{"check":"node scripts/check-infrastructure.mjs"}}

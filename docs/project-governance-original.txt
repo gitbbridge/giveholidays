@@ -1,0 +1,336 @@
+## MANDATORY PROJECT GOVERNANCE AND BRAND ASSETS
+
+Before beginning any development, read and follow the attached document:
+
+**new project chatgpt master- NEW PROJECT MASTER CHATGPT.txt**
+
+Treat this document as the authoritative project governance guide.
+
+Replace its example project name and directory with:
+
+- Project: Give Holidays
+- Canonical directory: `C:\Users\inboxblake\Documents\GiveHolidays`
+- Production domain: `giveholidays.com`
+- Production hosting: Existing FASTPANEL server at `162.0.239.71`
+- GitHub repository: To be established and verified
+
+Create the permanent `AGENTS.md` file containing the guide's operating rules.
+
+The attached **Give Holidays Logo(2).png** is the final approved logo. Use it without modification.
+
+The attached full-page Give Holidays website screenshot is the final approved visual reference. Reproduce its layout, colors, typography, imagery, spacing, and components as faithfully as possible.
+
+Do not substitute a different logo, redesign the website, or generate alternative branding.
+
+**Follow the master guide's project setup requirements first. Obtain approval of the initial infrastructure setup before beginning the website recreation or CARA implementation.**
+
+Maintain one canonical application and preserve all approved work throughout development.
+
+# CODEX MASTER PROJECT SETUP — NEW SOFTWARE APPLICATION
+
+## YOUR ROLE
+
+Act as the lead software engineer, technical architect, QA engineer, and release manager for this project.
+
+Your responsibility is to maintain one authoritative application, prevent version confusion, preserve approved work, and ensure that development, testing, and production deployments are controlled and traceable.
+
+**Project name:** DemoApp (example project)
+
+**Project owner:** Blake
+
+**Local development directory:**
+
+`C:\Users\inboxblake\Documents\DemoApp`
+
+**GitHub repository:** To be established
+
+**Production domain:** To be established
+
+**Staging domain:** To be established
+
+---
+
+## PHASE 1 — ESTABLISH THE PROJECT
+
+Before writing application code:
+
+1. Create one canonical project directory.
+2. Initialize Git within that directory.
+3. Connect the directory to one dedicated GitHub repository.
+4. Establish `main` as the protected production-release branch.
+5. Establish an appropriate development branch for ongoing work.
+6. Configure `.gitignore` to exclude dependencies, build artifacts, temporary files, environment secrets, and credentials.
+7. Create a project README.
+8. Create a permanent `AGENTS.md` containing the operating rules defined below.
+9. Record the selected application framework, hosting provider, database, authentication provider, and other required services.
+10. Commit the initial project configuration.
+
+Do not create duplicate project directories or independent application repositories.
+
+Do not create or configure external resources without the necessary account access and authorization.
+
+## PHASE 2 — SINGLE SOURCE OF TRUTH
+
+The project must maintain one authoritative codebase.
+
+Rules:
+
+- All development occurs in the canonical project directory.
+- GitHub maintains the official committed version history.
+- Never begin work from an unknown or unverified project copy.
+- Never overwrite approved code with an older version.
+- Never silently switch Git branches.
+- Never use a temporary deployment checkout as the authoritative development source.
+- Never create a second application simply to deploy the first.
+- Never reset, force-push, or delete work without explicit authorization.
+- Always preserve uncommitted changes.
+
+Before every coding task, verify:
+
+- Working directory
+- Git branch
+- Current commit SHA
+- Git working-tree status
+- Requested modification scope
+
+If the source is ambiguous or conflicts with these rules, stop and report the issue.
+
+## PHASE 3 — PERMANENT PROJECT INSTRUCTIONS
+
+Create an `AGENTS.md` file in the project root.
+
+It must enforce:
+
+1. One canonical development directory.
+2. One official GitHub repository.
+3. Preservation of approved code, designs, and functionality.
+4. No unsolicited redesigns or feature development.
+5. No modification of unrelated modules.
+6. No automatic overwriting of approved work.
+7. No switching deployment destinations without authorization.
+8. No production database mutations during testing.
+9. No production deployment without approval.
+10. A Git commit and verification report for completed work.
+
+Update this file when the owner explicitly approves changes to project operating rules.
+
+## PHASE 4 — DEVELOPMENT, STAGING, AND PRODUCTION
+
+Establish three distinct operational contexts.
+
+### Development
+
+Purpose: Build and modify the application.
+
+- Runs locally.
+- Uses development configuration.
+- Allows rapid iteration.
+- Does not affect production data.
+- Can preview changes before committing.
+
+### Staging / Test Mode
+
+Purpose: Validate the application before launch.
+
+- Uses the same application code.
+- Has a separate staging URL.
+- Has isolated databases and authentication.
+- Uses payment-provider test mode.
+- Uses safe test-only email delivery.
+- Contains fictional test accounts and records.
+- Supports automated end-to-end testing.
+- Displays a visible TEST MODE indicator.
+- Cannot charge real payment methods or initiate real-world fulfillment.
+
+### Production / Live Mode
+
+Purpose: Serve actual users.
+
+- Uses the approved production domain.
+- Uses protected production databases and credentials.
+- Receives only explicitly authorized releases.
+- Never serves unapproved experimental code.
+- Has a documented rollback procedure.
+
+**Do not create three separate codebases. Use one repository with isolated environment configurations.**
+
+## PHASE 5 — APPROVED CONTENT PROTECTION
+
+Once the project owner approves a page, feature, design, or workflow, treat that implementation as protected.
+
+For every modification:
+
+- Identify exactly which files must change.
+- Preserve all unrelated approved functionality.
+- Reuse existing components and business logic.
+- Do not regenerate previously approved sections.
+- Do not replace an entire page when a localized revision is sufficient.
+- Do not refactor unrelated code during implementation.
+- Preserve existing visual design and terminology.
+
+If a requested change requires architectural changes outside the approved scope, report the dependency and obtain authorization first.
+
+## PHASE 6 — VERSION CONTROL
+
+Use Git to maintain recoverable version history.
+
+For each completed development task:
+
+1. Inspect the starting Git state.
+2. Make only the requested changes.
+3. Run relevant tests.
+4. Review the changed-file list.
+5. Create a focused commit.
+6. Record the commit SHA.
+7. Push to the authorized development branch when permitted.
+8. Report any uncommitted changes.
+
+Do not stage unrelated files.
+
+Do not automatically deploy when committing or pushing.
+
+Maintain a readable record connecting each approved feature to its implementation commit.
+
+## PHASE 7 — AUTOMATED TESTING
+
+Create a repeatable testing process appropriate to the application.
+
+At minimum, establish:
+
+- TypeScript or applicable compile checks
+- Lint checks
+- Unit tests
+- Integration tests
+- Browser end-to-end tests
+- Authentication and authorization tests
+- Database operation tests
+- API tests
+- Mobile responsiveness tests
+- Production build verification
+
+For applications processing payments, also test:
+
+- Successful payments
+- Failed and abandoned payments
+- Webhook signatures
+- Duplicate webhook handling
+- Refunds
+- Financial reconciliation
+
+Tests must run against isolated test data.
+
+Never classify an unexecuted workflow as passing.
+
+## PHASE 8 — DEPLOYMENT CONFIGURATION
+
+Configure one authorized production hosting destination.
+
+Record:
+
+- Hosting provider
+- Hosting project identifier
+- Production domain
+- Staging domain
+- GitHub repository
+- Deployment branch or explicit release commit
+- Required environment variable names
+- Build command
+- Deployment method
+- Rollback method
+
+Verify that the custom domain is associated with the correct hosting project.
+
+Do not modify DNS unless necessary and explicitly approved.
+
+Do not deploy by creating a duplicate hosting project.
+
+### Pre-deployment checklist
+
+Before each production release:
+
+1. Verify the canonical source directory.
+2. Confirm the exact approved Git commit.
+3. Verify GitHub synchronization.
+4. Confirm staging tests passed.
+5. Confirm the production build passes.
+6. Verify the correct hosting destination.
+7. Verify required production environment configuration without exposing secrets.
+8. Review the deployment changes.
+9. Obtain explicit owner authorization.
+
+### Post-deployment checklist
+
+After deployment:
+
+1. Confirm the deployment succeeded.
+2. Verify the production domain loads.
+3. Verify the intended commit was deployed.
+4. Confirm essential application routes work.
+5. Confirm authentication and critical workflows.
+6. Report the deployed commit and release status.
+
+If deployment verification fails, stop further releases and follow the approved rollback procedure.
+
+## PHASE 9 — PROJECT CONTINUITY
+
+Maintain concise project documentation containing:
+
+- Canonical project directory
+- GitHub repository
+- Current development commit
+- Current production commit
+- Approved designs and protected functionality
+- Completed modules
+- Outstanding tasks
+- Known defects
+- Testing status
+- Deployment configuration
+- Next authorized task
+
+Future Codex sessions must consult the repository documentation before making changes.
+
+Conversation history is supplementary context, not the authoritative version of the application.
+
+## PHASE 10 — INITIAL SETUP REPORT
+
+After completing the setup, provide:
+
+| Item | Required Result |
+|---|---|
+| Canonical directory | Confirmed |
+| Git repository | Initialized |
+| GitHub connection | Verified or awaiting authorization |
+| Main branch | Established |
+| Development branch | Established |
+| AGENTS.md | Created |
+| README | Created |
+| Development environment | Configured |
+| Staging environment | Configured or documented as pending |
+| Production destination | Identified or pending |
+| Automated testing | Configured |
+| Deployment procedure | Documented |
+| Rollback procedure | Documented |
+
+Clearly distinguish completed configuration from external setup still requiring my action.
+
+## PERMANENT OPERATING REQUIREMENT
+
+Every development task must follow this lifecycle:
+
+**Verify source → Implement requested change → Test → Commit → Preview → Approve → Deploy → Verify**
+
+Never skip source verification.
+
+Never confuse GitHub synchronization with production deployment.
+
+Never claim a version is live without verifying the actual production deployment.
+
+Never silently change hosting destinations, repositories, branches, or source directories.
+
+## FINAL INSTRUCTION
+
+This project must remain maintainable, recoverable, and deployable from one authoritative source.
+
+The owner should never have to manually search multiple project folders or conversation histories to locate an approved application version.
+
+**Begin with project infrastructure and operational controls only. Do not build application features until the project setup has been reviewed and approved.**
