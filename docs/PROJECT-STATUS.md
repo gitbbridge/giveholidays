@@ -48,3 +48,5 @@ External Gmail test: Google's receiving MX accepted the owner-authorized test wi
 ## Staging ready for exact release approval — 2026-11-11
 
 https://staging.giveholidays.com runs release 1b4540fc1d3dbf310a17bcecad818d82b28fc465 with isolated PostgreSQL, private storage, redirected test email, TEST MODE and valid TLS. Local27 tests/build, staged public form/SMTP, admin/hotel OTP, invitation revocation, RLS/access boundaries, full proposal/PDF, actual scanned file upload/download, legal gate and real PostgreSQL backup/restore passed. See verification/STAGING-RELEASE.md for scope/limits and artifact checksum. Node/PostgreSQL/ClamAV installed. Production artifact prepared but not running; production database/apex/www routing unchanged. Await exact-SHA approval per AGENTS.md, then execute cutover and verify. No repository application release is live on apex yet.
+
+Disk cleanup: safely recovered1.73 GB on VPS from old journals and caches; usage46%,10.8 GB available. Critical services and staging readiness verified. Local test folders preserved after policy blocked their deletion. Exact-release production approval still pending.
