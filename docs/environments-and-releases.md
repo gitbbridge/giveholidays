@@ -6,8 +6,9 @@ Development runs from the canonical checkout. Optional embedded PostgreSQL persi
 
 Staging uses the same application with a separate PostgreSQL database, private file/content paths, secret, test-only mail redirection, and VITE_APP_ENV=staging / APP_ENV=staging. The staging banner is implemented. The staging URL and external services are not yet configured. No payment or fulfillment feature exists.
 
-Production remains the existing FASTPANEL server 162.0.239.71 and giveholidays.com. Server access, verified site/web-root configuration, database service and role, SMTP, malware scanner and HTTPS remain external prerequisites. Current production SHA is unknown; no deployment or DNS change has been made.
+Production remains the existing FASTPANEL server 162.0.239.71 and giveholidays.com. Server access, verified site/web-root configuration, database service and role, SMTP, malware scanner and HTTPS remain external prerequisites. Current production SHA is unknown; no application release has been deployed. Mail TLS, SMTP/IMAP authentication and VPS mail DNS are verified; see verification/MAIL-INFRASTRUCTURE.md.
 
 The complete production build, packaging, runtime configuration, Nginx/service examples, migration approval, backup/restore and rollback procedures are in docs/DEPLOYMENT.md. Commits and GitHub synchronization never constitute deployment. Exact release approval and passing staging verification are required before production cutover.
 
 Tests and browser evidence are recorded in docs/verification/RESULTS.md. Real PostgreSQL network/service integration, SMTP receipt, scanner behavior and server backup restoration require staging verification; local isolated tests do not substitute for these checks.
+

@@ -20,7 +20,7 @@ Run npm run check and npm run build. The build emits dist/ (frontend) and build/
 
 Read AGENTS.md, docs/PROJECT-STATUS.md, docs/environments-and-releases.md and docs/master-build-brief.txt before work. See docs/verification/RESULTS.md and the saved screenshot comparison for executed verification. The public source ZIP remains in Downloads; only relevant public components were ported into this application.
 
-main is the protected release branch; codex/development is the development branch. Git commits/pushes never deploy. Production remains the existing FASTPANEL server 162.0.239.71 and giveholidays.com; no DNS or live-server changes have been made.
+main is the protected release branch; codex/development is the development branch. Git commits/pushes never deploy. Production remains the existing FASTPANEL server 162.0.239.71 and giveholidays.com; VPS mail TLS and DNS are now configured; no application release has been deployed. See docs/verification/MAIL-INFRASTRUCTURE.md.
 
 Confidential CARA requirements and runtime files must remain outside Git because this repository is public. Do not commit local data, secrets, hotel rates, documents, agreement wording or invitation credentials. CARA implementation follows the public website verification checkpoint.
 
@@ -33,3 +33,4 @@ See docs/DEPLOYMENT.md for private configuration and production requirements. Ac
 Both npm run check and npm run build cover public/private code. The build also checks that confidential form/guidance strings are absent from public output. npm run release:package creates an ignored, SHA-addressed release archive from a clean committed tree. Read the deployment guide before using it; packaging is not deployment.
 
 Legal review remains pending. Proposals are not automatically signed or accepted. Production PostgreSQL, SMTP, malware scanning, staging and actual FASTPANEL deployment must still be verified before launch.
+

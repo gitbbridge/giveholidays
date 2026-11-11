@@ -21,3 +21,9 @@ Incomplete DNS cutover:
 Rollback: restore Mail Settings Private Email if a later cutover fails. Existing Namecheap mailbox/history has not been deleted or migrated. Mail certificate relation previously null; use FASTPANEL email-domain certificate settings to revert if required. No global mail-service identity changes made.
 
 Temporary one-time panel login URL was accidentally printed during diagnostics, then consumed; resulting session token was never printed. Temporary server credential files were removed. SSH and SMTP passwords were never printed.
+
+## DNS migration completed — 2026-11-11
+
+This supersedes the incomplete DNS cutover section above. Owner opened the authenticated Namecheap page in the in-app browser, restoring control. Saved Custom MX: @ priority 10 mail.giveholidays.com. Added SPF @ `v=spf1 ip4:162.0.239.71 include:spf.privateemail.com ~all`, matching VPS DKIM at dkim._domainkey, and DMARC `_dmarc` `v=DMARC1; p=none; adkim=r; aspf=r`. Kept default._domainkey and mail A unchanged. Private Email SPF authorization retained during transition; no subscription or historical messages removed.
+
+All four records and mail A verified against both authoritative Namecheap nameservers and public resolver 1.1.1.1. Namecheap UI confirmed saved settings. Screenshot stored privately at .local/verification/namecheap-mail-dns.png. End-to-end external message delivery/receipt and old-mail IMAP migration remain untested/pending. Website DNS/cutover unchanged.

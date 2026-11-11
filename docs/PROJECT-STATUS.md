@@ -34,3 +34,7 @@ Owner review of the website and portal preview; obtain authorized SSH/FASTPANEL 
 ## Mail infrastructure update — 2026-11-11
 
 SSH access verified. VPS mail certificate installed and admin@giveholidays.com created; existing blake mailbox preserved. TLS and SMTP/IMAP authentication passed without sending mail. Owner authorized full VPS MX migration, but Namecheap browser automation failed even after window restoration; DNS still routes inbound mail to Private Email. See verification/MAIL-INFRASTRUCTURE.md for completed checks, pending DNS records and rollback. Website/staging deployment remains pending; no repository release is live.
+
+## Mail DNS migration completed — 2026-11-11
+
+Supersedes the preceding browser blocker: owner opened Namecheap in the in-app browser. Custom MX now points to mail.giveholidays.com; VPS SPF, matching dkim selector and non-enforcing DMARC published. All records verified on both authoritative nameservers and 1.1.1.1. Existing VPS blake mailbox and historical Namecheap mail retained. End-to-end message delivery and historical mail migration remain pending. No website release deployed.
