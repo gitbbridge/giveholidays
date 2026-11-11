@@ -1,0 +1,12 @@
+# Merge only into the verified existing FASTPANEL site, after review.
+# Keep FASTPANEL TLS configuration and redirects. Redirect www to the apex origin.
+client_max_body_size 51m;
+location / {
+    proxy_pass http://127.0.0.1:3001;
+    proxy_http_version 1.1;
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $remote_addr;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_read_timeout 90s;
+}

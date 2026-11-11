@@ -6,5 +6,5 @@
     "allowImportingTsExtensions": true, "esModuleInterop": true,
     "noUnusedLocals": true, "noUnusedParameters": true, "types": ["node"]
   },
-  "include": ["src", "server", "tests", "vite.config.ts"]
+  "include": ["src", "private", "server", "tests", "vite.config.ts", "vite.private.config.ts"]
 }

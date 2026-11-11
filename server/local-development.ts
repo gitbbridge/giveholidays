@@ -14,6 +14,7 @@ export async function localDevelopmentRepository(directory: string) {
   await mkdir(localRoot, { recursive: true });
   const database = new PGlite(target);
   await database.exec(await readFile(new URL('./schema.sql', import.meta.url), 'utf8'));
+  await database.exec(await readFile(new URL('./private-schema.sql', import.meta.url), 'utf8'));
   // PGlite serializes transactions. Each request uses the same SQL persistence logic
   // as production, inside its own transaction, without overlapping BEGIN statements.
   const repository = {
@@ -25,5 +26,5 @@ export async function localDevelopmentRepository(directory: string) {
       return new PostgresInquiryRepository(adapter).save(inquiry);
     }),
   };
-  return { repository, close: () => database.close() };
+  return { repository, database, close: () => database.close() };
 }

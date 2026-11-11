@@ -1,0 +1,20 @@
+# Replace paths/user only after verifying the existing FASTPANEL destination.
+[Unit]
+Description=Give Holidays application
+After=network.target postgresql.service
+[Service]
+Type=simple
+User=giveholidays
+Group=giveholidays
+WorkingDirectory=/REPLACE_WITH_VERIFIED_RELEASE_ROOT/current
+Environment=NODE_ENV=production
+EnvironmentFile=/etc/giveholidays/application.env
+ExecStart=/usr/bin/node build/server/index.js
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=45
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+[Install]
+WantedBy=multi-user.target

@@ -9,14 +9,15 @@
   "scripts": {
     "dev": "vite",
     "dev:api": "node --env-file-if-exists=.env --import tsx server/index.ts",
-    "build": "tsc --noEmit && vite build && tsc -p tsconfig.server.json && node scripts/copy-server-assets.mjs",
+    "build": "tsc --noEmit && vite build && vite build --config vite.private.config.ts && tsc -p tsconfig.server.json && node scripts/copy-server-assets.mjs && node scripts/check-private-boundary.mjs",
     "preview": "vite preview --host 127.0.0.1",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "test": "tsx --test tests/*.test.ts",
     "migrate": "node --env-file-if-exists=.env build/server/migrate.js",
     "start": "node --env-file-if-exists=.env build/server/index.js",
-    "check": "node scripts/check-infrastructure.mjs && npm run typecheck && npm run lint && npm test"
+    "check": "node scripts/check-infrastructure.mjs && npm run typecheck && npm run lint && npm test",
+    "release:package": "npm run build && node scripts/package-release.mjs"
   },
   "dependencies": {
     "cookie-parser": "^1.4.7",

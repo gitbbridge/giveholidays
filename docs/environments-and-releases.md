@@ -1,29 +1,13 @@
-# Environment and release plan
+# Environments and releases
 
-## Selected services
+Implementation now uses React, Vite, TypeScript, Express, PostgreSQL and SMTP. Administrator access is an explicit email allowlist with expiring verification codes; hotel access uses administrator-approved, single-use invitations plus email verification. No Base44 service is used. The authorized initial administrator and notification address is blake@giveholidays.com.
 
-Frontend direction: React, TypeScript, Vite; application scaffolding deferred until setup approval. Hosting: existing FASTPANEL server 162.0.239.71. Domain: giveholidays.com. Hosting site identifier, web root, SSH access, runtime support, TLS, and existing domain mapping have not been inspected. Database, authentication, email, payments, and CARA requirements are undecided. No external services have been provisioned.
+Development runs from the canonical checkout. Optional embedded PostgreSQL persists fictional data in ignored .local; a private test mailbox captures messages locally without external email. Confidential approved CARA wording, uploaded files, private screenshots and local configuration stay outside Git. Vite filesystem access denies these private locations as well as backend and private-build directories.
 
-## Environment isolation
+Staging uses the same application with a separate PostgreSQL database, private file/content paths, secret, test-only mail redirection, and VITE_APP_ENV=staging / APP_ENV=staging. The staging banner is implemented. The staging URL and external services are not yet configured. No payment or fulfillment feature exists.
 
-Development: canonical local checkout, development-only configuration, no production credentials. Node infrastructure check is runnable now.
-Staging: URL pending owner selection and access; same release code, separate database/authentication, payment test mode, test-only email and fictional accounts. Implement visible TEST MODE and prevent real charges/fulfillment before workflow testing.
-Production: existing FASTPANEL destination and domain above; exact current production commit unknown. No application has been deployed from this repository.
+Production remains the existing FASTPANEL server 162.0.239.71 and giveholidays.com. Server access, verified site/web-root configuration, database service and role, SMTP, malware scanner and HTTPS remain external prerequisites. Current production SHA is unknown; no deployment or DNS change has been made.
 
-## Testing
+The complete production build, packaging, runtime configuration, Nginx/service examples, migration approval, backup/restore and rollback procedures are in docs/DEPLOYMENT.md. Commits and GitHub synchronization never constitute deployment. Exact release approval and passing staging verification are required before production cutover.
 
-Configured now: dependency-free infrastructure integrity and approved-asset SHA-256 checks, runnable locally and in GitHub Actions.
-Pending application implementation: TypeScript, lint, unit/integration/API, database/auth/authorization, browser end-to-end and responsive checks, production build. Add payment success/failure/abandonment, signatures, idempotency, refunds and reconciliation if payments enter scope. None of these application tests has been executed.
-
-## Release procedure (pending server verification)
-
-1. Verify canonical directory, clean status, branch, release SHA and GitHub synchronization.
-2. Pass applicable isolated staging tests and production build. Expected frontend build command after scaffolding: npm run build; not available yet.
-3. Verify actual FASTPANEL site identifier, domain mapping, web root, runtime, environment variable names, TLS, and backups using authorized access. Do not expose credentials.
-4. Review exact artifact and changes; obtain explicit owner approval of that SHA and production release.
-5. Deploy built artifact from that same SHA to the verified existing site using a server-supported atomic release mechanism, to be confirmed after access. Never create another hosting project or change DNS implicitly.
-6. Verify domain, release SHA, routes, authentication and critical workflows. Record result and release SHA.
-
-## Rollback procedure (must be rehearsed in staging)
-
-Retain the prior verified release artifact, SHA and configuration. If release verification fails, stop further releases and restore the previous artifact using the verified server release mechanism; verify domain, SHA and workflows and record the incident. Never use destructive Git resets. Database rollback requires a separately approved backup/migration plan; do not assume restoring application files reverses data changes.
+Tests and browser evidence are recorded in docs/verification/RESULTS.md. Real PostgreSQL network/service integration, SMTP receipt, scanner behavior and server backup restoration require staging verification; local isolated tests do not substitute for these checks.

@@ -27,3 +27,5 @@ Never claim unexecuted tests passed or an unverified release is live. Maintain d
 
 Lifecycle: Verify source -> Implement -> Test -> Commit -> Preview -> Approve -> Deploy -> Verify.
 Infrastructure setup was reviewed and approved by Blake on 2026-11-11. The canonical folder was explicitly reconfirmed. Follow docs/master-build-brief.txt for the authorized sequence: website recreation, visual verification, then CARA implementation. Use the separately supplied approved CARA wording and clause requirements; do not invent replacements.
+
+This GitHub repository is public. Never commit actual supplier rates, agreements, private approved CARA guidance, original confidential requirements, private screenshots, test mailboxes, session/invitation credentials, or secrets. Keep them in ignored private storage and production persistent directories outside release artifacts. Serve private frontend assets and every private API only after backend authorization. Keep Vite filesystem access blocked for private/source-server/build/configuration directories as well.

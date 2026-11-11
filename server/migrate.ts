@@ -9,7 +9,8 @@ try {
   await client.query('BEGIN');
   await client.query('SELECT pg_advisory_xact_lock(19450231)');
   await client.query(await readFile(new URL('./schema.sql', import.meta.url), 'utf8'));
+  await client.query(await readFile(new URL('./private-schema.sql', import.meta.url), 'utf8'));
   await client.query('COMMIT');
-  console.log('Migration 001_public_inquiries applied.');
+  console.log('Public inquiry and private CARA migrations applied.');
 } catch { await client.query('ROLLBACK'); throw new Error('Migration failed; transaction rolled back.'); }
 finally { client.release(); await pool.end(); }
