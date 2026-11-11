@@ -1,25 +1,16 @@
-# Project continuity
+# Continuity — 2026-11-11
 
-Setup date: 2026-11-11. Owner: Blake.
-Canonical source: C:\Users\inboxblake\development\CAL\Giveholidays.com
+Canonical directory: C:\Users\inboxblake\development\CAL\Giveholidays.com
 Official repository: https://github.com/gitbbridge/giveholidays
-Branches: main (production releases), codex/development (ongoing work).
-Current development commit: resolve with git rev-parse HEAD; initial setup SHA is reported in the setup handoff and official Git history.
-Current production commit: unknown; no deployment performed.
+Development: codex/development. Resolve current SHA with git rev-parse HEAD.
+Production commit: unknown; nothing deployed from this repository.
 
-## Completed infrastructure
+Blake explicitly approved infrastructure setup and reconfirmed the canonical directory. Approved logo and full-page screenshot remain unchanged in docs/reference/. The website recreation uses the owner-supplied give-vacation-good.zip public source components and CSS, ported to independent React/Vite/TypeScript. No Base44 API/runtime/authentication/media dependency remains.
 
-Canonical Git initialization, dedicated origin, permanent operating rules, README, ignore rules, environment/release/rollback plan, original governance archive, approved asset preservation, and local/CI infrastructure checks.
-Verified: main and codex/development published. main requires a pull request and the infrastructure status check, enforces protection for administrators, and blocks force pushes and deletion. Initial setup commit: 19ba656f5f40336189400113d2001832c66a6628. Local npm ci and npm run check passed; approved asset SHA-256 checks passed. GitHub Actions results are reported in the setup handoff.
+Completed public checkpoint: full page, responsive navigation, local original images, Gather mark, hotel inquiry page, supplied privacy/terms pages, independent inquiry API, PostgreSQL SQL schema, notification outbox, local preview storage, isolated tests, production build and screenshot comparison. The privacy storage-provider paragraph was updated for independent PostgreSQL hosting.
 
-## Protected assets
+Verification: see docs/verification/RESULTS.md. Visual review remains available through the side-by-side artifact. Exact pixels are not claimed. No real SMTP or production PostgreSQL integration has been verified. No staging or production deployment, backup restore, DNS, or HTTPS verification has been performed.
 
-Approved unchanged logo: docs/reference/approved-logo.png, supplied as Give Holidays Logo.png.
-Approved full-page design: docs/reference/approved-website.png, supplied as screencapture-giveholidays-2026-11-11-10_56_00.png.
-No website implementation or CARA module exists yet.
+Approved CARA requirements are supplied at the project root as GiveHolidays_CARA_Approved_Requirements.txt. This confidential file is ignored by Git. Its later security update supersedes public-form language: only general partnership inquiries are public; guidance, agreement forms and documents require server-enforced authorization. The master brief requires website verification before CARA. Private implementation is next. Never embed confidential CARA content into public frontend assets or the public repository.
 
-## Outstanding
-
-Owner review of infrastructure; then faithful website recreation. Confirm frontend direction at review. Verify server/site configuration with authorized access; choose staging URL and isolated services. Define CARA scope and integrations. Implement and execute application tests with the associated features. No known application defects can be assessed before implementation.
-
-Next task requires owner approval: website recreation from the supplied reference using the original approved logo.
+Initial administrator email is awaiting owner specification. Production server, isolated database, staging URL, and SMTP access/configuration remain pending. Preserve this public recreation while implementing the private portal.

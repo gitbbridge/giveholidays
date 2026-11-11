@@ -1,0 +1,16 @@
+{
+  "reference": [
+    1920,
+    5501
+  ],
+  "recreation": [
+    1920,
+    5501
+  ],
+  "mean_absolute_channel_difference_0_to_255": [
+    7.995742819487366,
+    5.859567957341089,
+    6.1730828296370355
+  ],
+  "note": "Raw pixels include anti-aliasing, image compression, logo-source and color-profile differences; dimensions alone do not prove visual acceptance."
+}

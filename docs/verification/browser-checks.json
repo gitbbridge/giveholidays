@@ -1,0 +1,31 @@
+{
+  "testedOn": "2026-11-11",
+  "checks": {
+    "mobileMenuOpenedAndClosed": true,
+    "contactAnchorNavigation": true,
+    "contactInquiryReceivedInLocalDatabase": true,
+    "hotelPartnershipInquiryReceivedInLocalDatabase": true,
+    "privacyPageLoads": true
+  },
+  "responsiveWidths": [
+    {
+      "content": 305,
+      "overflow": false,
+      "scrollWidth": 305,
+      "viewport": 320
+    },
+    {
+      "content": 753,
+      "overflow": false,
+      "scrollWidth": 753,
+      "viewport": 768
+    },
+    {
+      "content": 1425,
+      "overflow": false,
+      "scrollWidth": 1425,
+      "viewport": 1440
+    }
+  ],
+  "externalEmailsSent": false
+}

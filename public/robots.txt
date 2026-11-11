@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /cara
+Disallow: /admin
+Sitemap: https://giveholidays.com/sitemap.xml

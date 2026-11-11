@@ -10,4 +10,5 @@ for (const [file, expected] of Object.entries(hashes)) {
 const rules = readFileSync('AGENTS.md', 'utf8');
 assert.ok(rules.includes('C:\\Users\\inboxblake\\development\\CAL\\Giveholidays.com'));
 assert.ok(rules.includes('https://github.com/gitbbridge/giveholidays'));
-console.log('Infrastructure checks passed; both approved asset checksums match. Application tests are pending implementation.');
+assert.equal(createHash('sha256').update(readFileSync('public/assets/give-holidays-logo.png')).digest('hex'), hashes['approved-logo.png'], 'Published logo must remain unchanged');
+console.log('Infrastructure and approved asset checks passed.');

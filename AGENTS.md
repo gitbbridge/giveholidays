@@ -26,4 +26,4 @@ Do not change hosting destinations or DNS without authorization. No production d
 Never claim unexecuted tests passed or an unverified release is live. Maintain docs/PROJECT-STATUS.md with completed work, outstanding tasks, known defects, test results, production state, and next authorized task. Connect approved features to implementation commits. Update these operating rules only when the owner explicitly approves changes.
 
 Lifecycle: Verify source -> Implement -> Test -> Commit -> Preview -> Approve -> Deploy -> Verify.
-Infrastructure setup must be reviewed and approved before website recreation or CARA implementation.
+Infrastructure setup was reviewed and approved by Blake on 2026-11-11. The canonical folder was explicitly reconfirmed. Follow docs/master-build-brief.txt for the authorized sequence: website recreation, visual verification, then CARA implementation. Use the separately supplied approved CARA wording and clause requirements; do not invent replacements.

@@ -1,0 +1,775 @@
+# CODEX MASTER BUILD — GIVE HOLIDAYS
+## Production Website + Private CARA Hotel Contracting System
+
+### PROJECT INFORMATION
+
+**Company:** Give Holidays  
+**Production domain:** https://giveholidays.com  
+**Local project directory:** `C:/Users/inboxblake/Documents/GiveHolidays/`  
+**Production hosting:** Existing FASTPANEL VPS  
+**Server IP:** `162.0.239.71`
+
+**Objective:** Replace the existing Base44 Give Holidays website with an independently hosted, production-ready implementation, eliminating the need for Base44's ongoing hosting subscription.
+
+This project has two sequential deliverables:
+
+1. Recreate the existing Give Holidays landing page from the attached screenshot with maximum possible pixel-level fidelity.
+2. Implement the private CARA — Charity Auction Rate Agreement — hotel supplier contracting system.
+
+Complete and verify the first deliverable before implementing the second.
+
+---
+
+# PART ONE — EXACT RECREATION OF THE APPROVED WEBSITE
+
+## 1. CRITICAL — THE ATTACHED SCREENSHOT IS THE FINAL APPROVED DESIGN
+
+**THIS IS NOT A REDESIGN PROJECT.**
+
+The attached full-page screenshot represents the final approved production website.
+
+Recreate this exact website.
+
+Do not use the screenshot as general inspiration.
+
+Do not modernize, reinterpret, enhance, simplify, or replace the existing design.
+
+**The objective is a visually indistinguishable recreation of the supplied screenshot at the reference viewport dimensions.**
+
+The screenshot is the single source of truth for the existing landing page.
+
+The supplied Give Holidays logo is the authoritative logo asset.
+
+If exact original imagery, fonts, or other assets are unavailable, report the missing assets. Do not silently substitute visibly different elements and claim pixel-perfect completion.
+
+## 2. VISUAL FIDELITY REQUIREMENTS
+
+Reproduce the following as accurately as possible:
+
+- Exact page composition and section order
+- Header height, logo placement, navigation spacing
+- Overall content width and section alignment
+- Deep forest-green, sage, mint, and neutral background colors
+- Typography, font sizes, line heights, and font weights
+- Headline wrapping and paragraph widths
+- Button dimensions, colors, border radii, and typography
+- Card dimensions, borders, shadows, and internal spacing
+- Icon sizes, stroke weights, and background treatments
+- Photography placement, crop, dimensions, and rounded corners
+- Section padding, whitespace, and vertical rhythm
+- Footer composition and styling
+- Responsive behavior consistent with the approved design language
+
+Use the same approved Give Holidays logo throughout.
+
+Do not redraw, modify, or reinterpret the logo.
+
+Avoid generic design templates, replacement components, unnecessary animations, new decorative elements, or unrelated creative changes.
+
+## 3. RECREATE THE EXACT EXISTING PAGE STRUCTURE
+
+Maintain the full-page layout shown in the screenshot, including:
+
+### Header
+
+Give Holidays logo on the left.
+
+Existing navigation:
+- About Us
+- How It Works
+- For Nonprofits
+- Travel Partners
+- Contact
+
+Existing forest-green Get in Touch button.
+
+### Hero
+
+Preserve the existing headline:
+
+**Exceptional Travel Experiences. Greater Fundraising Impact.**
+
+Preserve the current supporting copy and both existing buttons.
+
+Reproduce the split-screen layout, premium resort photograph, rounded imagery, and pale sage background treatment.
+
+### The Give Holidays Difference
+
+Preserve the heading:
+
+**Travel Experiences Designed to Make a Difference**
+
+Recreate the four existing benefit cards exactly as shown.
+
+### About Give Holidays
+
+Preserve:
+
+**A Different Kind of Travel Company. Built Around Giving.**
+
+Maintain the existing image on the left and company information on the right.
+
+### How It Works
+
+Preserve:
+
+**From Extraordinary Experiences to Extraordinary Impact**
+
+Maintain the existing four-step process, including its icons, labels, and descriptions.
+
+### For Nonprofits
+
+Preserve:
+
+**Inspire More Bidding. Create More Impact.**
+
+Recreate the pale sage promotional section, benefits, call-to-action, and resort photograph.
+
+### Hospitality & Travel Partnerships
+
+Preserve:
+
+**Building Meaningful Partnerships Across the Travel Industry**
+
+Recreate the dark forest-green background, hotel image, supporting copy, partner benefits, and call-to-action.
+
+### Our Commitment
+
+Preserve:
+
+**Professionalism at Every Step**
+
+Recreate the four commitment columns.
+
+### Gather Partnership
+
+Preserve:
+
+**Better Together With Gather**
+
+Use the existing Gather logo and maintain the established relationship and link to:
+
+https://gatherforgood.bid
+
+### Contact
+
+Preserve:
+
+**Let's Create Something Meaningful Together**
+
+Recreate the two-column contact section and its existing form.
+
+Make the form functional with secure backend submission, validation, spam protection, and administrator notification.
+
+### Footer
+
+Recreate the existing dark-green footer, logo, links, and layout.
+
+**Do not regenerate the website's written content.**
+
+Use the screenshot and any supplied source files to preserve the already-approved wording.
+
+Where screenshot text cannot be read accurately, identify it for verification instead of inventing replacement marketing copy.
+
+## 4. RESPONSIVE DESIGN
+
+The supplied screenshot is authoritative for its captured desktop layout.
+
+Match that layout precisely at the same viewport dimensions.
+
+For mobile and tablet screens, adapt the same design system without changing its visual identity or content.
+
+Ensure:
+- Responsive images and containers
+- Accessible navigation
+- Readable text
+- Correct stacking order
+- Touch-friendly buttons
+- No horizontal overflow
+- Consistent spacing and typography
+
+## 5. TECHNOLOGY
+
+Build an independently hosted application with:
+
+- React
+- Vite
+- TypeScript
+- Clean, organized CSS
+- Reusable components
+- Production build configuration
+- SEO metadata
+- Accessible semantic HTML
+
+Do not depend on Base44 APIs, databases, authentication, hosting, or runtime services.
+
+Preserve the approved visual design rather than introducing a new component library that changes its appearance.
+
+The public landing page should load quickly and require no visitor login.
+
+## 6. VISUAL COMPARISON — REQUIRED
+
+After recreating the page:
+
+1. Run the website locally.
+2. Capture a full-page screenshot at the original reference viewport.
+3. Compare it against the supplied Base44 screenshot.
+4. Inspect section dimensions, element positioning, typography, color, imagery, and spacing.
+5. Correct material differences.
+6. Repeat until the closest achievable visual match has been obtained.
+
+Use automated screenshot comparison where practical.
+
+Report any discrepancies that cannot be resolved without original source assets.
+
+**Do not declare the landing page complete merely because the page renders successfully.**
+
+---
+
+# PART TWO — CARA PRIVATE HOTEL CONTRACTING PORTAL
+
+## 7. CARA OVERVIEW
+
+After the landing page is faithfully recreated, implement:
+
+**CARA — Charity Auction Rate Agreement**
+
+CARA is Give Holidays' private hotel contracting program for preferred wholesale accommodation agreements supporting nonprofit charity auction travel packages.
+
+The system must allow participating hotels and resorts to submit commercial terms securely.
+
+**CARA must not be publicly accessible.**
+
+Our competitors must not be able to view wholesale pricing guidance, room-night projections, rate structures, inventory arrangements, or proposed contract terms.
+
+The attached CARA requirements document is authoritative for all approved form fields, messaging, agreement provisions, and workflow requirements.
+
+Implement the complete requirements without reducing their scope.
+
+## 8. PUBLIC HOTEL PARTNERSHIP ENTRY POINT
+
+On the existing Give Holidays landing page, retain the Travel Partners section.
+
+Its public call-to-action should lead to:
+
+`/hotel-partners`
+
+This page must use the exact approved Give Holidays branding.
+
+Publicly display only general information about becoming a hotel partner.
+
+Add a simple form:
+
+**Request Partnership Information**
+
+Fields:
+- Hotel / resort name
+- Property website
+- Contact name
+- Job title
+- Business email
+- Telephone number
+- Message (optional)
+
+Store inquiries securely and notify the administrator.
+
+Do not expose the CARA form or any confidential contracting language to public visitors.
+
+## 9. PRIVATE INVITATION SYSTEM
+
+Only Give Holidays administrators may authorize access to CARA.
+
+The process must work as follows:
+
+1. Hotel submits a public partnership inquiry.
+2. Administrator reviews the hotel.
+3. Administrator approves the hotel contact.
+4. The system sends a secure invitation by email.
+5. The approved contact verifies access through the invitation process.
+6. The hotel can access only its own private CARA submission.
+7. Administrator reviews the completed submission.
+
+Do not require hotel partners to create permanent accounts at launch.
+
+Use secure, expiring, revocable, single-purpose invitation credentials with server-side validation.
+
+Do not implement security through hidden links alone.
+
+Do not expose access tokens in logs or analytics.
+
+Include appropriate email verification before permitting confidential access.
+
+## 10. TWO PRIVATE SUBMISSION OPTIONS
+
+Once the hotel is authorized, display two branded cards.
+
+### OPTION A — Upload Existing Wholesale Agreement
+
+Allow the hotel to submit an existing FIT, wholesale, or travel trade agreement.
+
+Collect:
+
+- Property name
+- Legal contracting entity
+- Address and country
+- Website
+- Authorized contact
+- Job title
+- Email
+- Telephone
+- Agreement upload
+- Additional comments
+
+Accept PDF, DOC, and DOCX documents.
+
+Support multiple attachments.
+
+Validate file types and sizes on the server and store documents privately.
+
+Uploading does not constitute agreement acceptance.
+
+### OPTION B — Complete CARA Online
+
+Provide the full guided Charity Auction Rate Agreement.
+
+Use a multi-step form with:
+- Progress indicator
+- Back and Continue controls
+- Field validation
+- Saved draft support
+- Editable review screen
+- Final submission confirmation
+
+The form must follow the attached CARA requirements.
+
+## 11. CARA COMMERCIAL FIELDS
+
+Implement every approved field group.
+
+### A. Property and Contact Information
+
+Property details, legal contracting entity, room categories, reservation contacts, authorized representatives, and agreement effective dates.
+
+### B. Room Categories
+
+Support multiple room types, occupancy rules, bedding, children policies, single-occupancy adjustments, and upgrade supplements.
+
+### C. Four Seasonal Rate Structures
+
+Provide:
+
+1. High Season
+2. Mid Season
+3. Low Season
+4. Blackout / Restricted Period Rates
+
+Support date ranges and room-specific rates.
+
+Each structure must support:
+- Sunday–Thursday rate
+- Friday rate
+- Saturday rate
+- Currency
+- Taxes
+- Mandatory fees
+- Meal inclusions
+- Extra-person supplements
+- Net or commissionable designation
+- Restrictions
+
+Distinguish restricted-rate periods from dates when the hotel is completely unavailable.
+
+### D. Room Allocation
+
+Support:
+- Annual room allocations
+- Annual room-night allocations
+- Monthly room allocations
+- Monthly room-night allocations
+- Daily room allocations
+- On-request availability
+
+Clearly distinguish guaranteed inventory from inventory subject to confirmation.
+
+### E. Blackout Dates
+
+Provide a calendar interface supporting individual dates, date ranges, recurring restrictions, and special-event exclusions.
+
+### F. Booking Rules
+
+Collect:
+- Reservation cutoff
+- Required advance booking notice
+- Reservation contact details
+- Confirmation procedures
+- Expected response time
+- Voucher requirements
+- Amendments
+- Inventory release conditions
+
+### G. Payment Terms
+
+Collect:
+- Deposits
+- Deposit deadlines
+- Final payment deadlines
+- Payment methods
+- Credit arrangements
+- Taxes and incidental charges
+- Invoicing terms
+
+Do not store raw credit-card information.
+
+### H. Cancellation and No-Show Policies
+
+Capture hotel-defined rules for individual reservations, multiple-room reservations, group reservations, no-shows, amendments, and early departures.
+
+### I. Amenities and Guest Benefits
+
+Capture:
+- Complimentary breakfast
+- Discounted breakfast
+- Parking
+- Resort amenities
+- Children and rollaway policies
+- Upgrade supplements
+- Mandatory fees
+- Special conditions
+
+## 12. APPROVED HOTEL PRICING GUIDANCE
+
+Include the previously approved CARA informational card:
+
+**Not Sure What Rates to Offer?**
+
+Use the approved text from the attached CARA document, encouraging hotels to extend preferred wholesale rates comparable to those offered to established bed banks and tour operators.
+
+Position competitive rates as a way to help participating nonprofits maximize fundraising proceeds.
+
+Do not frame the request as a demand for donated rooms.
+
+This information is visible only inside the authenticated private CARA experience.
+
+## 13. APPROVED ROOM-NIGHT PRODUCTION MESSAGE
+
+Include the approved section:
+
+**Incremental Room Revenue. Year-Round Booking Potential.**
+
+Preserve the previously approved messaging about:
+
+- Incremental room-night production
+- Year-round travel opportunities
+- The 18-month travel redemption window
+- Hotel-defined blackout dates
+- Competitive rates and preferred guest inclusions
+- Potential production across participating destinations
+
+Use the approved disclaimer that room-night volumes are objectives, not guarantees.
+
+For this implementation, the guest's travel must be completed within the applicable 18-month redemption period, subject to contracted terms.
+
+Do not represent projected production as an established historical booking result.
+
+## 14. COMPLIMENTARY BREAKFAST INCENTIVE
+
+Include the previously approved informational card:
+
+**A Small Gesture That Makes a Lasting Impression**
+
+Use the approved text explaining that Give Holidays guests are charity auction winners whose participation supports nonprofit organizations.
+
+Emphasize Give Holidays' high regard for its travelers.
+
+Provide these options:
+
+- Complimentary daily breakfast for two
+- Complimentary daily breakfast for all registered guests
+- Preferred discounted breakfast
+- Not available
+
+Include a **Preferred Guest Benefit** indicator for complimentary options.
+
+Do not fabricate performance statistics about breakfast increasing reservations.
+
+## 15. CARA AGREEMENT PROVISIONS
+
+Implement the complete contractual clause checklist provided in the attached CARA document.
+
+Include:
+
+- Hotel duties
+- Give Holidays duties
+- Contracted room rates
+- Room types and occupancy
+- Availability and allocations
+- Blackout and restricted dates
+- Reservation procedures
+- Booking confirmations
+- Guest vouchers
+- Payment and invoicing
+- Cancellation and no-show policies
+- Guest incidental charges
+- Hotel renovation notices
+- Use of hotel names and promotional assets
+- Confidential wholesale rates
+- Charity auction distribution authorization
+- Approved online auction channels, including Gather
+- Contract duration
+- Renewals and amendments
+- Termination
+- Treatment of existing confirmed reservations
+- Data confidentiality
+- Liability and insurance provisions
+- Governing law
+- Authorized signatures
+
+Use the supplied FIT example only as a clause-reference document.
+
+Do not copy another hotel's specific rates, commercial terms, or identity.
+
+The CARA template must be identified as requiring legal review before being used for binding agreements.
+
+## 16. REVIEW, PDF GENERATION, AND AGREEMENT STATUS
+
+After completion, the hotel must be able to review all proposed terms and submit the agreement.
+
+Generate a professional Give Holidays-branded PDF containing the submitted commercial terms and applicable draft clauses.
+
+Do not insert fictitious signatures.
+
+Submissions must remain proposals until approved and properly executed by authorized representatives.
+
+Statuses:
+
+- Submitted
+- Under Review
+- Revision Requested
+- Approved for Signature
+- Executed
+- Declined
+- Expired
+
+Do not implement automatic contract acceptance.
+
+## 17. PRIVATE ADMINISTRATION DASHBOARD
+
+Create a secure administrator-only dashboard.
+
+Administrators must be able to:
+
+- Review hotel partnership inquiries
+- Approve or decline hotel invitations
+- Send and revoke invitations
+- View supplier submissions
+- Review seasonal rates
+- Review availability and allocations
+- Review blackout dates
+- Review payment terms
+- Download uploaded agreements
+- Download generated CARA PDFs
+- Add private administrative notes
+- Request revisions
+- Update agreement statuses
+- Export contract data
+
+Only explicitly authorized Give Holidays administrators may access this dashboard.
+
+## 18. DATA SECURITY — NON-NEGOTIABLE
+
+All wholesale prices, supplier agreements, contact information, and proposed contractual terms must remain private.
+
+Implement:
+
+- Backend authorization on every private API request
+- Strict per-hotel record isolation
+- Administrator role controls
+- Secure session management
+- Cryptographically secure invitation tokens
+- Expiration and revocation
+- Server-side file validation
+- Private document storage
+- Authorized document-download endpoints
+- Secure secrets management
+- Protection against common injection and file-upload attacks
+- Appropriate rate limits and submission abuse controls
+- Audit logging of administrative actions
+- Database backups and restoration procedures
+
+Do not expose confidential information in public JavaScript bundles, static JSON, application configuration files, or publicly retrievable document URLs.
+
+Use authenticated, server-enforced authorization for confidential resources.
+
+Keep CARA pages out of public sitemaps and apply noindex directives, but never treat those measures as substitutes for access controls.
+
+## 19. BACKEND AND DATABASE
+
+Build a production-capable backend for the contact form and CARA system.
+
+Use PostgreSQL for structured persistent data.
+
+Create separate models/tables as appropriate for:
+
+- Hotel properties
+- Hotel contacts
+- Partnership inquiries
+- Invitations
+- CARA submissions
+- Room types
+- Seasonal rates
+- Allocations
+- Blackout periods
+- Booking rules
+- Payment terms
+- Cancellation policies
+- Guest benefits
+- Agreement versions
+- Private documents
+- Administrative users
+- Audit events
+
+Provide database migrations.
+
+Store confidential files in private storage and permit access only through authorized backend operations.
+
+Ensure all production data survives application redeployments.
+
+No Base44 services or dependencies may remain.
+
+## 20. EMAIL AND NOTIFICATIONS
+
+Provide email notifications for:
+
+- New partnership inquiry
+- Hotel invitation
+- Invitation verification
+- Submitted CARA
+- Revision request
+- Agreement status updates
+
+Use environment variables for email-service credentials.
+
+Do not hardcode passwords, tokens, or API keys.
+
+Provide clear configuration instructions for the email service.
+
+## 21. PRODUCTION DEPLOYMENT — FASTPANEL VPS
+
+Deploy to the existing FASTPANEL server when ready and when server access is available.
+
+**Server IP:** `162.0.239.71`  
+**Domain:** giveholidays.com
+
+The public frontend and private backend should be served securely under the production domain.
+
+Use a production-compatible architecture with Nginx reverse proxying where necessary.
+
+Prepare:
+
+- Production frontend build
+- Backend application service
+- PostgreSQL configuration
+- Environment-variable configuration
+- Secure private document storage
+- Application startup/service configuration
+- Database migrations
+- Automated deployment instructions
+- Application logs
+- Backup and recovery instructions
+
+Do not change DNS prematurely.
+
+The domain currently has historical Base44/Render DNS records. Once the new deployment has been tested against the target server, provide the exact required DNS changes.
+
+Preserve existing email DNS records.
+
+Configure Let's Encrypt SSL through the existing FASTPANEL environment after the domain routes correctly.
+
+Verify both:
+
+- https://giveholidays.com
+- https://www.giveholidays.com
+
+Do not assume SSL renewal succeeds until HTTPS has been verified.
+
+## 22. TESTING AND ACCEPTANCE
+
+### Landing Page
+
+Verify:
+
+- Desktop screenshot fidelity
+- Responsive layouts
+- Navigation
+- Images and fonts
+- Contact form submission
+- Email notifications
+- Footer links
+- SEO metadata
+- Production build
+
+### CARA Portal
+
+Verify:
+
+- Uninvited visitors cannot open the CARA form
+- Invitation verification succeeds
+- Expired or revoked invitations are rejected
+- Hotel A cannot access Hotel B's records
+- Hotel A cannot retrieve Hotel B's files through direct URLs or API requests
+- Anonymous visitors cannot retrieve private agreement data
+- All four rate structures save correctly
+- Blackout dates persist
+- Allocations persist
+- Payment and cancellation fields persist
+- File uploads are validated and secured
+- CARA PDF generation works
+- Submitted values match the generated agreement
+- Administrative status updates work
+- Email notifications work
+- Database backups can be restored
+- No Base44 dependency remains
+
+Do not declare the system production-ready until these tests pass.
+
+## 23. PROJECT EXECUTION ORDER
+
+Follow this order without expanding scope.
+
+**PHASE 1 — Website Recreation**
+
+Create the standalone project and faithfully reproduce the approved Give Holidays landing page.
+
+**PHASE 2 — Visual Verification**
+
+Compare the new website against the supplied screenshot and correct discrepancies.
+
+**PHASE 3 — CARA Development**
+
+Implement the secure invitation-only hotel supplier portal using the attached approved requirements.
+
+**PHASE 4 — Security and Functional Testing**
+
+Test the complete website, backend, permissions, uploads, PDF generation, and administrative workflow.
+
+**PHASE 5 — Production Deployment**
+
+Prepare and deploy the finished application to the existing FASTPANEL server, verify functionality and SSL, and then switch domain routing away from Base44.
+
+Do not cancel or disable the existing live site until the replacement deployment has been verified.
+
+## FINAL DIRECTIVE
+
+The Give Holidays landing page is already approved.
+
+**REPLICATE IT. DO NOT REDESIGN IT.**
+
+The CARA functionality and business rules are already established.
+
+**IMPLEMENT THEM. DO NOT REINTERPRET THEM.**
+
+The new production website must preserve the existing Give Holidays identity while allowing the business to operate independently of Base44.
+
+Build one coherent, maintainable production application suitable for managing confidential hotel supplier agreements.
+
+Report completed work, test results, deployment status, and any genuine blockers without introducing unsolicited features or architectural changes.

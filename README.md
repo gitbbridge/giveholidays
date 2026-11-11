@@ -1,29 +1,25 @@
 # Give Holidays
 
-Canonical source: `C:\Users\inboxblake\development\CAL\Giveholidays.com`
+Canonical source: C:\Users\inboxblake\development\CAL\Giveholidays.com
 Official repository: https://github.com/gitbbridge/giveholidays
-Owner: Blake
+Owner: Blake. Infrastructure setup approved on 2026-11-11.
 
-Infrastructure only. Website recreation and CARA implementation await owner approval of this setup.
+React, Vite, TypeScript and independent Node/PostgreSQL backend. Original public website components and CSS were ported from the owner-supplied source ZIP. The official logo remains unchanged; photos are hosted locally. No Base44 application dependency remains.
 
-## Development
+## Local preview
 
-Node.js 22 or newer is required. Run `npm ci`, then `npm run check`.
-No application features, framework dependencies, or preview server have been created.
-The selected frontend direction is React + TypeScript + Vite, subject to setup review; dependencies and application scaffolding follow approval.
-Database, authentication, payments, email, and CARA services remain pending requirements and isolated environment configuration.
+Requires Node.js >=22.12. Run npm ci. Copy .env.example to .env only if .env does not already exist. In separate terminals run npm run dev:api and npm run dev. Open http://127.0.0.1:5173.
 
-## Branches
+The optional local PostgreSQL engine stores isolated development data in ignored .local/development-db. Without SMTP configuration, notifications remain queued and no email is sent. Production requires an external PostgreSQL service; local storage is disabled in production.
 
-`main` is the production-release branch. `codex/development` is the development branch.
-Commits and pushes never deploy the application. Production releases require explicit owner approval.
+## Checks and build
+
+Run npm run check and npm run build. The build emits dist/ (frontend) and build/server/ (compiled Node backend). Production starts with npm start; building needs development dependencies, while compiled production runtime supports npm ci --omit=dev. Set NODE_ENV=production and all required database/origin/SMTP environment variables. Run npm run migrate after building against the selected database; production migrations require explicit release approval and CONFIRM_PRODUCTION_MIGRATION=approved.
 
 ## Project records
 
-- AGENTS.md: permanent operating rules
-- docs/project-governance-original.txt: original owner-supplied guide; the canonical path and repository above supersede its examples
-- docs/environments-and-releases.md: environment isolation, deployment, rollback, testing plan
-- docs/PROJECT-STATUS.md: continuity and remaining work
-- docs/reference/: original approved logo and visual reference, unchanged
+Read AGENTS.md, docs/PROJECT-STATUS.md, docs/environments-and-releases.md and docs/master-build-brief.txt before work. See docs/verification/RESULTS.md and the saved screenshot comparison for executed verification. The public source ZIP remains in Downloads; only relevant public components were ported into this application.
 
-Production destination: existing FASTPANEL server at `162.0.239.71`, domain `giveholidays.com`. No hosting or DNS changes are authorized by this setup.
+main is the protected release branch; codex/development is the development branch. Git commits/pushes never deploy. Production remains the existing FASTPANEL server 162.0.239.71 and giveholidays.com; no DNS or live-server changes have been made.
+
+Confidential CARA requirements and runtime files must remain outside Git because this repository is public. Do not commit local data, secrets, hotel rates, documents, agreement wording or invitation credentials. CARA implementation follows the public website verification checkpoint.
