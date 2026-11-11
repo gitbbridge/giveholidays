@@ -42,3 +42,5 @@ Supersedes the preceding browser blocker: owner opened Namecheap in the in-app b
 Mail delivery test: owner-authorized message reached blake@auctionintel.us and owner confirmed receipt. SMTP 587 TLS and unauthenticated relay rejection passed from local computer. Recipient is hosted on same VPS; external-provider delivery remains untested. Port 25 timed out from local computer; inbound reply not yet found. See mail verification report for exact scope and limits.
 
 Return-path update: the owner's reply is now verified in admin@giveholidays.com INBOX, matching the original test Message-ID. Bidirectional mail test passed via authenticated SMTP and read-only IMAP. Roundcube UI not tested; off-server delivery remains unverified.
+
+External Gmail test: Google's receiving MX accepted the owner-authorized test with 250 2.0.0 OK; Exim marked Completed. Inbox placement and Gmail return-path confirmation remain pending.
