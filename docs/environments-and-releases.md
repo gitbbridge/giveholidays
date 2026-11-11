@@ -12,3 +12,5 @@ The complete production build, packaging, runtime configuration, Nginx/service e
 
 Tests and browser evidence are recorded in docs/verification/RESULTS.md. Real PostgreSQL network/service integration, SMTP receipt, scanner behavior and server backup restoration require staging verification; local isolated tests do not substitute for these checks.
 
+
+Production release update: 1b4540fc1d3dbf310a17bcecad818d82b28fc465 is live and verified at https://giveholidays.com; see verification/PRODUCTION-RELEASE.md. This supersedes earlier pending-hosting statements.
