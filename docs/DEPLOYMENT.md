@@ -6,7 +6,7 @@ The existing approved destination is FASTPANEL VPS 162.0.239.71, giveholidays.co
 
 After a clean committed checkout passes npm run check, run npm run release:package. It rebuilds both frontends and the compiled Node server, scans public output for private content, and creates a SHA-addressed tar.gz plus checksum in ignored .local/releases. Packaging refuses an uncommitted tree or overwriting an existing release folder.
 
-The artifact contains dist/, build/server/, build/private/, the unchanged official logo used by PDF generation, package manifests and release.json. It contains no .env, supplier data, private approved content, uploaded documents, source requirement files or test mailbox. Deploy the artifact from this canonical repository; the server directory is a release artifact, not another development source.
+The artifact contains dist/, build/server/, build/private/, the unchanged official logo used by PDF generation, package manifests and release.json. It contains no .env, supplier data, private approved content, uploaded documents, source requirement files or test mailbox. Unpack releases outside every publicly served web root. Deploy the artifact from this canonical repository; the server directory is a release artifact, not another development source. Ensure no existing Nginx static-file regex or alias bypasses backend authorization for private assets; the example uses a ^~ proxy location for this reason.
 
 ## Persistent configuration
 
