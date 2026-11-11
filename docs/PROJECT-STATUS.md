@@ -40,3 +40,5 @@ SSH access verified. VPS mail certificate installed and admin@giveholidays.com c
 Supersedes the preceding browser blocker: owner opened Namecheap in the in-app browser. Custom MX now points to mail.giveholidays.com; VPS SPF, matching dkim selector and non-enforcing DMARC published. All records verified on both authoritative nameservers and 1.1.1.1. Existing VPS blake mailbox and historical Namecheap mail retained. End-to-end message delivery and historical mail migration remain pending. No website release deployed.
 
 Mail delivery test: owner-authorized message reached blake@auctionintel.us and owner confirmed receipt. SMTP 587 TLS and unauthenticated relay rejection passed from local computer. Recipient is hosted on same VPS; external-provider delivery remains untested. Port 25 timed out from local computer; inbound reply not yet found. See mail verification report for exact scope and limits.
+
+Return-path update: the owner's reply is now verified in admin@giveholidays.com INBOX, matching the original test Message-ID. Bidirectional mail test passed via authenticated SMTP and read-only IMAP. Roundcube UI not tested; off-server delivery remains unverified.
