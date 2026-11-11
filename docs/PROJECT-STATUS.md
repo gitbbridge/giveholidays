@@ -30,3 +30,7 @@ The production PostgreSQL service/role/migrations, actual SMTP receipt, real mal
 ## Next task
 
 Owner review of the website and portal preview; obtain authorized SSH/FASTPANEL access and SMTP details (requested asynchronously), inspect the existing destination, configure isolated staging and run external integration checks. Only after those pass should a concrete exact-SHA production release be proposed for approval. Do not change DNS or disable the old live site prematurely.
+
+## Mail infrastructure update — 2026-11-11
+
+SSH access verified. VPS mail certificate installed and admin@giveholidays.com created; existing blake mailbox preserved. TLS and SMTP/IMAP authentication passed without sending mail. Owner authorized full VPS MX migration, but Namecheap browser automation failed even after window restoration; DNS still routes inbound mail to Private Email. See verification/MAIL-INFRASTRUCTURE.md for completed checks, pending DNS records and rollback. Website/staging deployment remains pending; no repository release is live.
